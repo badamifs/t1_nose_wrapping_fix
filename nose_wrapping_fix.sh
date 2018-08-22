@@ -1,4 +1,9 @@
-#/bin/bash
+#!/bin/bash
+usage ()
+{
+  echo 'Usage : nose_wrapping_fix <original_wrapped_image> <xmin> <xsize> <ymin> <ysize> <zmin> <zsize> <xmin_front> <xsize_front> <ymin_front> <ysize_front> <zmin_front> <zsize_front>'
+  exit
+}
 
 file=$1
 wrapped_image=`basename $file .nii`
