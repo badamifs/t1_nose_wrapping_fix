@@ -27,9 +27,10 @@ fslroi $wrapped_image $wrapped_image\_back "$roi_x_min $roi_x_size $roi_y_min $r
 fslroi $wrapped_image $wrapped_image\_front "$roi_x_min_front $roi_x_size_front $roi_y_min_front $roi_y_size_front $roi_z_min_front $roi_z_size_front""
 
 #step2: merge image along y-axis
+
 fslmerge -y $wrapped_image\_merged $wrapped_image\_back.nii.gz $wrapped_image\_front.nii.gz 
 
-#make sure image dimensions match original image
+#step3: make sure image dimensions match original image
 
 og_dim1=$(fslinfo $wrapped_image |grep "dim1" |awk '{print $1}')
 og_dim2=$(fslinfo $wrapped_image |grep "dim2" |awk '{print $1}')

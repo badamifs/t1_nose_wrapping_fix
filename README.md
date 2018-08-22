@@ -7,11 +7,11 @@ Split image into front and back in a way that you avoid the wrapping nose. Selec
 # Step2:
 merge image along y-axis
 
-#Before:
+# Before:
 ![](before.png)
 
-#After:
+# After:
 ![](after.png)
 
-#Step3:
+# Step3:
 confirm dimensions match the original image
